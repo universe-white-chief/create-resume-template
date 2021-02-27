@@ -1,27 +1,38 @@
-
-title: sddtc
-description: 我的个人主页
-
+# "/" + 仓库的名字. 资源文件的路径组成部分
 baseurl: "/create-resume-template"
+# 主题风格: default | candy
+theme-styled: candy
 
+# 网页的标题
+title: 我的个人主页
+
+# 个人昵称
 username: 常 卉
+# 个人简介， 显示在页面的昵称正下方
 typing_text: 全栈工程师， 专注于 Mobile, TDD, DDD 等
 
+# GitHub 仓库的用户名
 github_username: exampleUser
-qq_username: exampleUser
-weixin_username: exampleUser
+# 新浪微博的用户名
 weibo_username: exampleUser
+# 知乎的用户名
 zhihu_username: exampleUser
 
+# 是否显示 关于我 这个模块， 如果值为 false, 页面不会显示该模块
 show_aboutme_card: true
-# about_me_title: The will be displayed as the title in the About Me section
+# 关于我模块的 标题
 about_me_title: 关于我
-# about_me_description: This will be displayed under the title.
-about_me_description: 人间温柔观察者/某 知名啥也不 是博主/已读不回专业户/重度耳机依赖患者/退役魔法少女
+# 关于我模块的 说明
+about_me_description: 人间温柔观察者/🍕 某 知名啥也不 是博主/已读不回专业户/🎧 重度耳机依赖患者/😒 退役魔法少女
 
+# 是否显示 技能 这个模块， 如果值为 false, 页面不会显示该模块
 show_skills_card: true
-skills_title: 技能
+# 技能模块的 标题
+skills_title: 我的那些个 666 的技能 😳
 
+# 技能模块中 掌握的语言名字 name 和掌握的程度 weight
+# name 的值表示语言
+# weight 的值表示掌握程度, 可以是 5/4/3/2/1 之中的任何值. 其中 5 表示掌握的很不错，依次递减
 skills-languages:
   - name: TypeScript
     weight: 5
@@ -44,6 +55,9 @@ skills-languages:
   - name: Ruby
     weight: 2
 
+# 技能模块中 喜欢或者擅长的爱好. 名字 name 和喜爱的程度 weight
+# name 的值表示爱好
+# weight 的值表示喜爱程度, 可以是 5/4/3/2/1 之中的任何值. 其中 5 表示很喜欢，依次递减
 life-favorites:
   - name: 游泳
     weight: 5
@@ -54,6 +68,9 @@ life-favorites:
   - name: 美妆
     weight: 4
 
+# 技能模块中 其它. 名字 name 和感兴趣的程度 weight
+# name 的值表示其它
+# weight 的值表示感兴趣的程度, 可以是 5/4/3/2/1 之中的任何值. 其中 5 表示很有兴趣，依次递减
 skills-others:
   - name: 创造101
     weight: 2
@@ -62,7 +79,9 @@ skills-others:
   - name: 追星
     weight: 4
 
+# 是否显示 个人经历 这个模块， 如果值为 false, 页面不会显示该模块
 show_timeline_card: true
+# 个人经历模块的标题
 timeline_title: 学业历程 & 经历
 
 timeline:
@@ -81,7 +100,7 @@ timeline:
     subtitle: 计算机科学与技术专业/建筑专业/设计专业
     timeline-side: left
 
-
+# 其它配置，可忽略
 plugins:
   - "jekyll-github-metadata"
 

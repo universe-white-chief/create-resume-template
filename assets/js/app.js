@@ -1,6 +1,6 @@
 setTimeout(function() {
   fadeOutPreloader(document.getElementById('preloader'), 69);
-}, 1500);
+}, 800);
 
 $(document).ready(function() {
   $(window).on('beforeunload', function() {
