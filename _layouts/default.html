@@ -36,24 +36,24 @@
 {% include landing-page.html %}
 <div class="layout">
     {%if site.show_aboutme_card %}
-    <section class="card neumorphism-card-big">
+    <section class="card card-big">
         <h1 class="title">{{site.about_me_title}}</h1>
         <p class="description" data-aos="fade-down">{{site.about_me_description}}</p>
     </section>
     {% endif %}
     {%if site.show_skills_card %}
-    <section class="card neumorphism-card-big">
+    <section class="card card-big">
         <h1 class="title">{{site.skills_title}}</h1>
 
         <div id="skills">
             <input type="radio" id="all" name="filter" checked/>
-            <label class="filter-button neumorphism-button" for="all">全部</label>
+            <label class="filter-button blog-button" for="all">全部</label>
             <input type="radio" id="language" name="filter"/>
-            <label class="filter-button neumorphism-button" for="language">语言</label>
+            <label class="filter-button blog-button" for="language">语言</label>
             <input type="radio" id="framework" name="filter"/>
-            <label class="filter-button neumorphism-button" for="framework">爱好</label>
+            <label class="filter-button blog-button" for="framework">爱好</label>
             <input type="radio" id="tool" name="filter"/>
-            <label class="filter-button neumorphism-button" for="tool">其它</label>
+            <label class="filter-button blog-button" for="tool">其它</label>
 
             {% for language in site.skills-languages %}
             <div skill-type="language" skill-weight="{{language.weight}}" data-aos="zoom-in">
@@ -75,7 +75,7 @@
     {% endif %}
 
     {%if site.show_timeline_card %}
-    <section class="card neumorphism-card-big">
+    <section class="card card-big">
         <h1 class="title">{{site.timeline_title}}</h1>
         <div class="timeline-wrapper">
             <ul class="timeline">
@@ -85,21 +85,21 @@
                     <div class="direction-l">
                         <div class="flag-wrapper">
                             <span class="hexagon"></span>
-                            <span class="flag neumorphism-button" data-aos="zoom-in-right">
+                            <span class="flag blog-button" data-aos="zoom-in-right">
                             <a href="{{event.title-url}}" target="_blank" rel="noreferrer">
                               <span>{{event.title}}</span>
                             </a>
                             </span>
                             <span class="time-wrapper" data-aos="zoom-in-right">
-                            <span class="time neumorphism-card">{{event.date}}</span>
+                            <span class="time blog-card">{{event.date}}</span>
                           </span>
                         </div>
-                        <div class="desc neumorphism-card" data-aos="zoom-in-right">
+                        <div class="desc blog-card" data-aos="zoom-in-right">
                             {{event.subtitle}}
                             {% if event.tags %}
                             <div class="tag-wrapper">
                                 {% for tag in event.tags %}
-                                <span class="tag neumorphism-card">{{tag.tag}}</span>
+                                <span class="tag blog-card">{{tag.tag}}</span>
                                 {% endfor %}
                             </div>
                             {% endif %}
@@ -113,21 +113,21 @@
                     <div class="direction-r">
                         <div class="flag-wrapper">
                             <span class="hexagon"></span>
-                            <span class="flag neumorphism-button" data-aos="zoom-in-left">
+                            <span class="flag blog-button" data-aos="zoom-in-left">
                             <a href="{{event.title-url}}" target="_blank" rel="noreferrer">
                               <span>{{event.title}}</span>
                             </a>
                             </span>
                             <span class="time-wrapper" data-aos="zoom-in-left">
-                                <span class="time neumorphism-card">{{event.date}}</span>
+                                <span class="time blog-card">{{event.date}}</span>
                             </span>
                         </div>
-                        <div class="desc neumorphism-card" data-aos="zoom-in-left">
+                        <div class="desc blog-card" data-aos="zoom-in-left">
                             {{event.subtitle}}
                             {% if event.tags %}
                             <div class="tag-wrapper">
                                 {% for tag in event.tags %}
-                                <span class="tag neumorphism-card">{{tag.tag}}</span>
+                                <span class="tag blog-card">{{tag.tag}}</span>
                                 {% endfor %}
                             </div>
                             {% endif %}
