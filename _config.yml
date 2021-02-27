@@ -1,7 +1,7 @@
 # "/" + 仓库的名字. 资源文件的路径组成部分
 baseurl: "/create-resume-template"
-# 主题风格: default | candy
-theme-styled: candy
+# 主题风格: default | candy ｜ green
+theme-styled: green
 
 # 网页的标题
 title: 我的个人主页
