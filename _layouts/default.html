@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/vendors.min.css" | prepend: site.baseurl }}">
+
+    <script src="{{ "/assets/js/vendors.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/app.js" | prepend: site.baseurl }}"></script>
+</head>
+
+<body>
+<div id="preloader">
+    <div class="load">
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+    </div>
+</div>
+{% include landing-page.html %}
+<div class="layout">
+    {%if site.show_aboutme_card %}
+    <section class="card neumorphism-card-big">
+        <h1 class="title">{{site.about_me_title}}</h1>
+        <p class="description" data-aos="fade-down">{{site.about_me_description}}</p>
+    </section>
+    {% endif %}
+    {%if site.show_skills_card %}
+    <section class="card neumorphism-card-big">
+        <h1 class="title">{{site.skills_title}}</h1>
+
+        <div id="skills">
+            <input type="radio" id="all" name="filter" checked />
+            <label class="filter-button neumorphism-button" for="all">全部</label>
+            <input type="radio" id="language" name="filter" />
+            <label class="filter-button neumorphism-button" for="language">语言</label>
+            <input type="radio" id="framework" name="filter" />
+            <label class="filter-button neumorphism-button" for="framework">爱好</label>
+            <input type="radio" id="tool" name="filter" />
+            <label class="filter-button neumorphism-button" for="tool">其它</label>
+
+            {% for language in site.skills-languages %}
+            <div skill-type="language" skill-weight="{{language.weight}}" data-aos="zoom-in">
+                {{language.name}}
+            </div>
+            {% endfor %}
+            {% for favorites in site.life-favorites %}
+            <div skill-type="framework" skill-weight="{{favorites.weight}}" data-aos="zoom-in">
+                {{favorites.name}}
+            </div>
+            {% endfor %}
+            {% for other in site.skills-others %}
+            <div skill-type="tool" skill-weight="{{other.weight}}" data-aos="zoom-in">
+                {{other.name}}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {%if site.show_timeline_card %}
+    <section class="card neumorphism-card-big">
+        <h1 class="title">{{site.timeline_title}}</h1>
+        <div class="timeline-wrapper">
+            <ul class="timeline">
+                {% for event in site.timeline %}
+                {% if event.timeline-side == 'left' %}
+                <li>
+                    <div class="direction-l">
+                        <div class="flag-wrapper">
+                            <span class="hexagon"></span>
+                            <span class="flag neumorphism-button" data-aos="zoom-in-right">
+                            <a href="{{event.title-url}}" target="_blank" rel="noreferrer">
+                              <span>{{event.title}}</span>
+                            </a>
+                            </span>
+                            <span class="time-wrapper" data-aos="zoom-in-right">
+                            <span class="time neumorphism-card">{{event.date}}</span>
+                          </span>
+                        </div>
+                        <div class="desc neumorphism-card" data-aos="zoom-in-right">
+                            {{event.subtitle}}
+                            {% if event.tags %}
+                            <div class="tag-wrapper">
+                                {% for tag in event.tags %}
+                                <span class="tag neumorphism-card">{{tag.tag}}</span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </li>
+                {% endif %}
+
+                {% if event.timeline-side == 'right' %}
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <span class="hexagon"></span>
+                            <span class="flag neumorphism-button" data-aos="zoom-in-left">
+                            <a href="{{event.title-url}}" target="_blank" rel="noreferrer">
+                              <span>{{event.title}}</span>
+                            </a>
+                            </span>
+                            <span class="time-wrapper" data-aos="zoom-in-left">
+                                <span class="time neumorphism-card">{{event.date}}</span>
+                            </span>
+                        </div>
+                        <div class="desc neumorphism-card" data-aos="zoom-in-left">
+                            {{event.subtitle}}
+                            {% if event.tags %}
+                            <div class="tag-wrapper">
+                                {% for tag in event.tags %}
+                                <span class="tag neumorphism-card">{{tag.tag}}</span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    {% endif %}
+</div>
+<footer class="footer">
+    <p>
+        Built with
+        <a class="highlight-link" href="https://jekyllrb.com/"target="_blank" rel="noreferrer">
+            Jekyll
+        </a>
+        and powered by
+        <a class="highlight-link" href="https://pages.github.com/" target="_blank" rel="noreferrer">
+            Github Pages
+        </a>
+    </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+title: sddtc
+description: 我的个人主页
+
+baseurl: "/create-resume-template"
+
+username: 常 卉
+typing_text: 全栈工程师， 专注于 Mobile, TDD, DDD 等
+
+github_username: exampleUser
+qq_username: exampleUser
+weixin_username: exampleUser
+weibo_username: exampleUser
+zhihu_username: exampleUser
+
+show_aboutme_card: true
+# about_me_title: The will be displayed as the title in the About Me section
+about_me_title: 关于我
+# about_me_description: This will be displayed under the title.
+about_me_description: 人间温柔观察者/某 知名啥也不 是博主/已读不回专业户/重度耳机依赖患者/退役魔法少女
+
+show_skills_card: true
+skills_title: 技能
+
+skills-languages:
+  - name: TypeScript
+    weight: 5
+  - name: JavaScript
+    weight: 4
+  - name: Python
+    weight: 2
+  - name: HTML5
+    weight: 4
+  - name: CSS3
+    weight: 3
+  - name: SASS
+    weight: 3
+  - name: Java
+    weight: 1
+  - name: Kotlin
+    weight: 1
+  - name: C++
+    weight: 2
+  - name: Ruby
+    weight: 2
+
+life-favorites:
+  - name: 游泳
+    weight: 5
+  - name: 摄影
+    weight: 4
+  - name: 旅行
+    weight: 2
+  - name: 美妆
+    weight: 4
+
+skills-others:
+  - name: 创造101
+    weight: 2
+  - name: 动漫
+    weight: 5
+  - name: 追星
+    weight: 4
+
+show_timeline_card: true
+timeline_title: 学业历程 & 经历
+
+timeline:
+  - title: XX 公司
+    title-url: https://example.com/
+    date: Mar 2019 - Sep 2020
+    subtitle: 软件工程师
+    tags:
+      - tag: Java
+      - tag: Typescript
+    timeline-side: right
+
+  - title: XX 大学
+    title-url: https://example.com/
+    date: 2017 - 2019
+    subtitle: 计算机科学与技术专业/建筑专业/设计专业
+    timeline-side: left
+
+
+plugins:
+  - "jekyll-github-metadata"
+
+exclude:
+  [
+      "_assets",
+      "Gemfile",
+      "Gemfile.lock"
+  ]
+
+
+
